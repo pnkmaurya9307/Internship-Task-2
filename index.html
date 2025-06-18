@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Web Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>My Portfolio</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#layout">Layout</a></li>
+                <li><a href="#todo">To-Do List</a></li>
+                <li><a href="#gallery">Image Gallery</a></li>
+            </ul>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <main class="main-wrapper">
+        <section id="home" class="hero-section module-card">
+            <h2>Welcome to My Interactive Web Portfolio!</h2>
+            <p>Explore a collection of dynamic web elements designed to showcase HTML, CSS, and JavaScript skills.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                <a href="#layout" class="btn btn-secondary">See My Work</a>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section module-card">
+            <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="contactName">Name:</label>
+                    <input type="text" id="contactName" name="name" required>
+                    <div class="error-message" id="contactNameError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">Email:</label>
+                    <input type="email" id="contactEmail" name="email" required>
+                    <div class="error-message" id="contactEmailError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="contactSubject">Subject:</label>
+                    <input type="text" id="contactSubject" name="subject">
+                </div>
+                <div class="form-group">
+                    <label for="contactMessage">Message:</label>
+                    <textarea id="contactMessage" name="message" rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i>&nbsp&nbspSend Message</button>
+            </form>
+        </section>
+
+        <section id="layout" class="layout-section module-card">
+            <h2><i class="fas fa-grip-horizontal"></i> Responsive Layout Showcase</h2>
+            <div class="layout-grid">
+                <aside class="sidebar-left layout-panel">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li>Web Development</li>
+                        <li>UI/UX Design</li>
+                        <li>JavaScript</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </aside>
+
+                <div class="main-articles-area">
+                    <article class="article-card layout-panel">
+                        <h3>Responsive Portfolio Layout</h3>
+                        <p>Discover how I crafted a clean, responsive portfolio using CSS Grid—ideal for all screen sizes.</p>
+                        <button class="btn btn-secondary">Read More</button>
+                    </article>
+                    <article class="article-card layout-panel">
+                        <h3>Adaptive Article Cards</h3>
+                        <p>Sleek, modular cards built with CSS Grid and media queries for full responsiveness.</p>
+                        <button class="btn btn-secondary">Read More</button>
+                    </article>
+                    <article class="article-card layout-panel">
+                        <h3>Flexbox + Grid Layout</h3>
+                        <p>A modern layout combining Flexbox for nav and Grid for content—perfect for scalable designs.</p>
+                        <button class="btn btn-secondary">Read More</button>
+                    </article>
+                </div>
+
+                <aside class="sidebar-right layout-panel">
+                    <h3>Quick Links</h3>
+                    <div class="ad-box"> <i class="fab fa-linkedin fa-lg"></i>  Linkedin</div>
+                    <div class="ad-box"><i class="fab fa-github"></i>   GitHub</div>
+                    <div class="ad-box"><i class="fab fa-facebook"></i>  Facebook</div>
+                </aside>
+            </div>
+        </section>
+
+        <section id="todo" class="todo-section module-card">
+            <h2><i class="fas fa-clipboard-list"></i> Dynamic To-Do List</h2>
+            <div class="todo-input-section">
+                <input type="text" id="todoInput" placeholder="Add a new task...">
+                <button id="addTodoBtn" class="btn btn-primary"><i class="fas fa-tasks"></i>&nbsp&nbsp Add Task</button>
+            </div>
+            <ul id="todoList">
+                </ul>
+            <button id="clearCompletedBtn" class="btn btn-secondary mt-3">Clear All Completed</button>
+        </section>
+
+        <section id="gallery" class="gallery-section module-card">
+            <h2><i class="fas fa-images"></i> Dynamic Image Gallery</h2>
+            <div class="image-upload-section">
+                <input type="file" id="imageUploadInput" accept="image/*" multiple>
+                <button id="uploadImagesBtn" class="btn btn-primary"><i class="fas fa-upload"></i> &nbsp&nbspUpload Selected Images</button>
+            </div>
+            <div class="image-gallery-grid" id="imageGallery">
+                </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy;  All rights reserved by @PankajMaurya </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
